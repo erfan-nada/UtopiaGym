@@ -1,6 +1,147 @@
-h1{
-    color: black;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
 }
-body{
-    background-color: violet;
+
+header {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
+#video {
+    position: relative; /* Necessary for positioning the video within the section */
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflow to prevent video from spilling out */
+  }
+  
+#video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the section without distortion */
+  }
+nav {
+    background: black;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background:rgb(59, 58, 58);
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgb(94, 89, 89);
+    color: white;
+}
+.NewGiza {
+    position: relative;
+  }
+  
+  .NewGiza img {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-overlayNewGiza {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    font-size: 50px;
+  }
+  
+  .TextAllignLocationsng {
+    position: absolute;
+    top: 17%; /* Adjust top position as needed */
+    right: 5%; /* Adjust right position as needed */
+    color: grey;
+    padding-left: 72%;
+    text-align: center;
+  }
+
+  .Arkan {
+    position: relative;
+  }
+  
+  .Arkan img {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-overlayArkan {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    color: white;
+    font-size: 50px;
+  }
+  .TextAllignLocationsArkan {
+    position: absolute;
+    top: 74%; /* Adjust top position as needed */
+    left: 5%; /* Adjust right position as needed */
+    color: grey;
+    padding-right: 72%;
+    text-align: center;
+  }
+
+  .Seashell {
+    position: relative;
+  }
+  
+  .Seashell img {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-overlaySeashell {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    font-size: 50px;
+  }
+  
+  .TextAllignLocationsSeashell {
+    position: absolute;
+    top: 140%; /* Adjust top position as needed */
+    right: 5%; /* Adjust right position as needed */
+    color: grey;
+    padding-left: 72%;
+    text-align: center;
+  }
