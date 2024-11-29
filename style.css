@@ -383,4 +383,16 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+.signup-button {
+  background-color: rgb(71, 68, 68);
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-button svg {
+  margin-right: 5px; 
+}
 

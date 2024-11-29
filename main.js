@@ -44,3 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elementsToAnimate.forEach((element) => observer.observe(element));
 });
+
+
