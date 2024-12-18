@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <div class="logo">
-            <a href="index.html">
-                <img src="utopialogo.png" alt="UTOPIA" style="width: 70px; height: 60px; margin-right: 90%;">
-            </a>
-        </div>
         <head>
         <title>TrainerBooking</title>
     
@@ -99,8 +94,8 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px;">
                 </div>
                 <div>
-                    <label for="phone">Phone Number<span style="color: red;">*</span></label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required style="width: 100%; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px;">
+                    <label for="Username">Username<span style="color: red;">*</span></label><br>
+                    <input type="tel" id="username" name="username" placeholder="Enter your username" required style="width: 100%; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px;">
                 </div>
                 <div>
                     <label for="weight">Weight</label><br>
@@ -116,37 +111,37 @@
             <h3 style="color: white; margin-top: 20px;">Your Fitness Goals</h3>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Weight loss"> Weight loss
+                    <input type="radio" name="goals" value="Weight loss"> Weight loss
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Fat loss"> Fat loss
+                    <input type="radio" name="goals" value="Fat loss"> Fat loss
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Endurance"> Endurance
+                    <input type="radio" name="goals" value="Endurance"> Endurance
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Flexibility"> Flexibility
+                    <input type="radio" name="goals" value="Flexibility"> Flexibility
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Muscular strength"> Muscular strength
+                    <input type="radio" name="goals" value="Muscular strength"> Muscular strength
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Appearance"> Appearance
+                    <input type="radio" name="goals" value="Appearance"> Appearance
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Fitness"> Fitness
+                    <input type="radio" name="goals" value="Fitness"> Fitness
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="General conditioning"> General conditioning
+                    <input type="radio" name="goals" value="General conditioning"> General conditioning
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Toning & shaping"> Toning & shaping
+                    <input type="radio" name="goals" value="Toning & shaping"> Toning & shaping
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Posture"> Posture
+                    <input type="radio" name="goals" value="Posture"> Posture
                 </label>
                 <label style="color: grey;">
-                    <input type="checkbox" name="goals" value="Other"> Other
+                    <input type="radio" name="goals" value="Other"> Other
                 </label>
             </div>
             <br>
@@ -192,37 +187,37 @@
     <h3 style="color: white; margin-top: 20px;">Do You Have Any Diagnosed Health Problems?</h3>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Asthma"> Asthma
+        <input type="radio" name="health_problems" value="Asthma"> Asthma
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Arthritis"> Arthritis
+        <input type="radio" name="health_problems" value="Arthritis"> Arthritis
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Heart disease"> Heart disease
+        <input type="radio" name="health_problems" value="Heart disease"> Heart disease
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Lung disease"> Lung disease
+        <input type="radio" name="health_problems" value="Lung disease"> Lung disease
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="High blood pressure"> High blood pressure
+        <input type="radio" name="health_problems" value="High blood pressure"> High blood pressure
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Low blood pressure"> Low blood pressure
+        <input type="radio" name="health_problems" value="Low blood pressure"> Low blood pressure
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Shortness of breath"> Shortness of breath
+        <input type="radio" name="health_problems" value="Shortness of breath"> Shortness of breath
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Blood cholesterol"> Blood cholesterol
+        <input type="radio" name="health_problems" value="Blood cholesterol"> Blood cholesterol
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Thyroid condition"> Thyroid condition
+        <input type="radio" name="health_problems" value="Thyroid condition"> Thyroid condition
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Diabetic"> Diabetic
+        <input type="radio" name="health_problems" value="Diabetic"> Diabetic
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="health_problems" value="Other"> Other
+        <input type="radio" name="health_problems" value="Other"> Other
     </label>
 </div>
 <br>
@@ -230,22 +225,22 @@
 <h3 style="color: white; margin-top: 20px;">Please List Any Current or Past Injuries That Could Prevent Certain Activities:</h3>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Back problems"> Back problems
+        <input type="radio" name="injuries" value="Back problems"> Back problems
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Muscle disorder"> Muscle disorder
+        <input type="radio" name="injuries" value="Muscle disorder"> Muscle disorder
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Joint dislocation"> Joint dislocation
+        <input type="radio" name="injuries" value="Joint dislocation"> Joint dislocation
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Tendon/ligament Tear"> Tendon/ligament Tear
+        <input type="radio" name="injuries" value="Tendon/ligament Tear"> Tendon/ligament Tear
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Recent surgery"> Recent surgery (last 12 months)
+        <input type="radio" name="injuries" value="Recent surgery"> Recent surgery (last 12 months)
     </label>
     <label style="color: grey;">
-        <input type="checkbox" name="injuries" value="Other"> Other
+        <input type="radio" name="injuries" value="Other"> Other
     </label>
 </div>
 <br>
