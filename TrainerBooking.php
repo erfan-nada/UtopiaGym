@@ -18,24 +18,24 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
-        $fullName = $_POST['full_name'];
-        $gender = $_POST['gender'];
-        $dob = $_POST['dob'];
-        $email = $_POST['email'];
-        $weight = $_POST['weight'];
-        $height = $_POST['height'];
-        $fitnessGoal = $_POST['fitness_goal'];
-        $exerciseFrequency = $_POST['exercise_frequency'];
-        $activityLevel = $_POST['activity_level'];
-        $workoutLocation = $_POST['workout_location'];
-        $smoker = isset($_POST['smoker']) ? 1 : 0;
-        $pregnant = isset($_POST['pregnant']) ? 1 : 0;
-        $healthProblems = $_POST['health_problems'];
-        $injuries = $_POST['injuries'];
-        $trainer = $_POST['trainer'];
+        $username = $_POST['Username'];
+        $fullName = $_POST['Full Name'];
+        $gender = $_POST['Gender'];
+        $dob = $_POST['Date of Birth'];
+        $email = $_POST['Email Address'];
+        $weight = $_POST['Weight'];
+        $height = $_POST['Height'];
+        $fitnessGoal = $_POST['Fitness Goal'];
+        $exerciseFrequency = $_POST['Exercise Frequency'];
+        $activityLevel = $_POST['Activity Level'];
+        $workoutLocation = $_POST['Workout Location'];
+        $smoker = isset($_POST['Smoker']) ? 1 : 0;
+        $pregnant = isset($_POST['Pregnant']) ? 1 : 0;
+        $healthProblems = $_POST['Health Problems'];
+        $injuries = $_POST['Injuries'];
+        $trainer = $_POST['Trainer'];
 
-        $sql = "INSERT INTO trainer_booking (Username, `Full Name`, Gender, `Date of Birth`, `Email Address`, Weight, Height, `Fitness Goal`, `Exercise Frequency`, `Activity Level`, `Workout Location`, Smoker, Pregnant, `Health Problems`, Injuries, Trainer)
+        $sql = "INSERT INTO trainer_booking ('Username', 'Full Name', 'Gender', 'Date of Birth', 'Email Address', 'Weight', 'Height', 'Fitness Goal', 'Exercise Frequency', 'Activity Level', 'Workout Location', 'Smoker', 'Pregnant', 'Health Problems', 'Injuries', 'Trainer')
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
@@ -52,8 +52,6 @@
 
     $conn->close();
     ?>
-
-
         <div class="logo">
             <a href="index.html">
                 <img src="utopialogo.png" alt="UTOPIA" style="width: 70px; height: 60px; margin-right: 90%;">
@@ -129,7 +127,7 @@
         <br><br><br><br><br><br>
         <h1><img src="booknow.png" height=60px width=250px> </h1>
 
-        <form style="width: 50%; margin: auto; background-color: #1a1a1a; color: white; padding: 20px; border-radius: 10px;" onsubmit="addToCart(event)">
+        <form style="width: 50%; margin: auto; background-color: #1a1a1a; color: white; padding: 20px; border-radius: 10px;" onsubmit="addToCart(event) " > 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div>
                     <label for="fullname">Full Name<span style="color: red;">*</span></label><br>
