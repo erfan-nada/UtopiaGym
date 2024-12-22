@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    
     <form action="SignUp.php" method="POST">
     <form action="Login.php" method="POST">
     <form action="TrainerBooking.php" method="POST">
@@ -27,10 +28,10 @@
                 <li><a href="Locations.html">LOCATIONS</a></li>
                 <li><a href="#Gym Wear">GYM WEAR</a></li>
                 <li><a href="#Supplements">SUPPLEMENTS</a></li>
-                <li><a href="http://localhost/WebProject/TrainerBooking.php">TRAINER BOOKING</a></li>
+                <li><a href="TrainerBooking.html">TRAINER BOOKING</a></li>
                 <li><a href="#Nutrition Plan">NUTRITION PLAN</a></li>
-                <li><a href="http://localhost/WebProject/Login.php">LOGIN</a></li>
-                <li><a href="http://localhost/WebProject/SignUp.php"><button type="button" class="signup-button">
+                <li><a href="Login.html">LOGIN</a></li>
+                <li><a href="SignUp.html"><button type="button" class="signup-button">
                     <i class="fa fa-heart"></i>
                     SIGN UP TO GET REWARDS
                   </button></a></li>             
@@ -152,7 +153,22 @@
     <script src="main.js"></script>
 
 
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        
+        if (username) {
+            const header = document.createElement('div');
+            header.textContent = `Welcome, ${username}!`;
+            header.style.textAlign = 'center';
+            header.style.margin = '20px';
+            header.style.fontSize = '18px';
+            header.style.fontWeight = 'bold';
+            document.body.prepend(header);
+        }
 
+        
+        </script>
     
 </body>
 </html>
