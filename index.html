@@ -9,10 +9,6 @@
 
 </head>
 <body>
-    
-    <form action="SignUp.php" method="POST">
-    <form action="Login.php" method="POST">
-    <form action="TrainerBooking.php" method="POST">
 
     <div id="topheader">
     <header>
@@ -153,22 +149,7 @@
     <script src="main.js"></script>
 
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const username = urlParams.get('username');
-        
-        if (username) {
-            const header = document.createElement('div');
-            header.textContent = `Welcome, ${username}!`;
-            header.style.textAlign = 'center';
-            header.style.margin = '20px';
-            header.style.fontSize = '18px';
-            header.style.fontWeight = 'bold';
-            document.body.prepend(header);
-        }
-
-        
-        </script>
+    
     
 </body>
 </html>

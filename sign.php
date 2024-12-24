@@ -4,14 +4,13 @@ $username = "root";
 $password = "";
 $db = "gym";
 
-// Establish connection
+
 $conn = mysqli_connect($servername, $username, $password, $db);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Use $_POST for form data
 $firstName = $_POST['firstName'] ;
 $lastName = $_POST['secondName'] ;
 $email = $_POST['email'] ;
@@ -20,15 +19,12 @@ $username = $_POST['username'] ;
 $dob = $_POST['dob'] ;
 $phone = $_POST['phone'] ;
 
-// Check if all required fields are filled
 if (!$firstName || !$lastName || !$email || !$password || !$username || !$dob || !$phone) {
     die("Error: Missing required fields.");
 }
 
-// Hash the password
 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-// Prepare SQL query using prepared statements
 $stmt = $conn->prepare("INSERT INTO user (`First Name`, `Last Name`, `Email Address`, `Password`, `Username`, `date of birth`, `Phone Number`) 
 VALUES (?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssss", $firstName, $lastName, $email, $hashedPassword, $username, $dob, $phone);
@@ -40,7 +36,6 @@ if ($stmt->execute()) {
     echo "Error: " . $stmt->error;
 }
 
-// Close the connection
 $stmt->close();
 $conn->close();
 ?>
