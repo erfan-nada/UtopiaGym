@@ -43,7 +43,9 @@ To set up the project locally, follow these steps:
 
 ## Usage
 -Open your web browser and navigate to 'http://localhost/UtopiaGym/index.html'.
+
 -Create an account or log in to access the gym management features.
+
 -Explore the trainer booking system and manage your fitness journey!
 
 ## Contributors
