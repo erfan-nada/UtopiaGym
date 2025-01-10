@@ -4,12 +4,12 @@
 Welcome to the UTOPIA Gym Management System! This project is designed to streamline gym operations, enhance member experience, and facilitate trainer bookings. The system provides a user-friendly interface for managing memberships, scheduling classes, and communicating with members.
 
 ## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributors](#contributors)
-- [License](#license)
+- [Features]
+- [Technologies Used]
+- [Installation]
+- [Usage]
+- [Contributors]
+- [License]
 
 ## Features
 - **User  Registration and Login**: Secure sign-up and login functionality for gym members.
@@ -48,9 +48,13 @@ To set up the project locally, follow these steps:
 
 ## Contributors
 **Erfan Nada** - Project Leader
+
 **Fajr Reda** - Developer
+
 **Mohamed Ammar** - Developer
+
 **Anan Khaled** - Developer
+
 
 ## License
 This project is licensed under the MIT License.
