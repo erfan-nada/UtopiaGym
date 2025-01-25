@@ -13,13 +13,12 @@
         </head>
         <h1> <img src="trainingatutopia.png"></h1>
         <p>Welcome to UTOPIA online community, your portable hub for sweat sessions and mindfulness practices. It’s always a good time to set new life goals & when it comes to your well being ones, Our platform is the place to help you achieve their outmost. It was never just a workout, it’s something to look forward to. Wherever you are, whenever you’re ready, whatever your goal is. We take care of everything. With the right personal trainer you can never reach a plateau. Sign up for our customized workouts to unlock the extraordinary & let the transformation begin.</p>
-        <div class="shoppingcart" alt="Shopping Cart">
-            <img src="shoppingcart.png" width="60" height="50">
-        </div>
 
         <div class="shoppingcart" alt="Shopping Cart" onclick="toggleCart()">
             <img src="shoppingcart.png" width="60" height="50">
         </div>
+            <!-- Clear Cart Button -->
+    <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
         <section id="trainingvideo">
             <video   width="1100" height="800" autoplay muted loop>
             <source src="trainingvideo.mp4" type="video/mp4">
@@ -388,47 +387,100 @@
                 text-align: center;
                 margin-top: auto;
             }
-            
+            .clear-cart {
+    position: fixed;
+    top: 10px;
+    right: 90px; /* Adjust to align next to the shopping cart icon */
+    z-index: 200;
+    background-color: #cdcbcb; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-cart:hover {
+    background-color: #d32f2f;
+}
             </style>
 
             <script>
-                let cart = []; 
+let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+function addToCart(event) {
+    event.preventDefault();
+
+    const productItem = event.target.closest('.product-item');
+    const trainerSelect = document.querySelector('select[name="trainer"]');
+
+    if (productItem) {
+        const productPriceText = productItem.querySelector('.product-price').textContent;
+        const [productName, productPrice] = productPriceText.split(' - ');
+        cart.push({ name: productName.trim(), price: productPrice.trim() });
+    } else if (trainerSelect) {
+        const selectedTrainer = trainerSelect.options[trainerSelect.selectedIndex];
+        const trainerName = selectedTrainer.value;
+        const trainerPrice = selectedTrainer.text.split(' - ')[1];
+        cart.push({ name: trainerName.trim(), price: trainerPrice.trim() });
+    }
+
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCart();
+}
+
+function updateCart() {
+    const cartContainer = document.getElementById('cartContainer');
+    const cartElement = document.getElementById('cart');
+
+    cartElement.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartElement.innerHTML = '<p>Your cart is empty</p>';
+    } else {
+        cart.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.innerHTML = `<p>${item.name} - ${item.price}</p>`;
+            cartElement.appendChild(itemElement);
+        });
+    }
+
+    cartContainer.style.display = 'block';
+}
+
+window.addEventListener('load', () => {
+    cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+    updateCart();
+});
+
+document.querySelectorAll('.add-to-cart button, button[type="submit"]').forEach(button => {
+    button.addEventListener('click', addToCart);
+});
+
+function toggleCart() {
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.style.display = cartContainer.style.display === 'none' ? 'block' : 'none';
+}
+function clearCart() {
+    // Clear the cart in sessionStorage
+    sessionStorage.removeItem('cart');
+
+    // Reset the local cart variable
+    cart = [];
+
+    // Update the cart UI
+    updateCart();
+
+    // Optionally, hide the cart container
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.style.display = 'none';
+
+    alert('Cart has been cleared.');
+}
             
-                
-                function addToCart(event) {
-                    event.preventDefault(); 
-            
-                    const trainerSelect = document.querySelector('select[name="trainer"]');
-                    const selectedTrainer = trainerSelect.options[trainerSelect.selectedIndex];
-                    const trainerName = selectedTrainer.value;
-                    const trainerPrice = selectedTrainer.text;
-            
-                    cart.push({ name: trainerName, price: trainerPrice });
-            
-                    
-                    updateCart();
-                }
-            
-                function updateCart() {
-                    const cartIcon = document.getElementById('cart');
-                    cartIcon.innerHTML = ""; // 
-            
-                    if (cart.length === 0) {
-                        cartIcon.innerHTML = "<p>Your cart is empty</p>";
-                    } else {
-                        cart.forEach(item => {
-                            const div = document.createElement('div');
-                            div.innerHTML = `<p>${item.name} - ${item.price}</p>`;
-                            cartIcon.appendChild(div);
-                        });
-                    }
-                }
-            
-                
-                function toggleCart() {
-                    const cartContainer = document.getElementById('cartContainer');
-                    cartContainer.style.display = cartContainer.style.display === "none" ? "block" : "none";
-                }
             </script>
 
     </body>
