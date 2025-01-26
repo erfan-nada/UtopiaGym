@@ -14,6 +14,8 @@ Welcome to the UTOPIA Gym Management System! This project is designed to streaml
 ## Features
 - **User  Registration and Login**: Secure sign-up and login functionality for gym members.
 - **Trainer Booking**: Users can book sessions with trainers based on their fitness goals.
+- **Merchandise**: Users can buy exclusive gym wear.
+- **Supplements**: Users can buy various supplements such as creatine, protein, and preworkout.
 - **Membership Management**: Manage memberships efficiently with automated processes.
 - **Class Scheduling**: Schedule and manage group classes.
 - **Responsive Design**: The website is designed to be mobile-friendly and accessible on various devices.
