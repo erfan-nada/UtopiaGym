@@ -18,7 +18,7 @@ Welcome to the UTOPIA Gym Management System! This project is designed to streaml
 - **Supplements**: Users can buy various supplements such as creatine, protein, and preworkout.
 - **Membership Management**: Manage memberships efficiently with automated processes.
 - **Class Scheduling**: Schedule and manage group classes.
-- **Chatbot: Answers user inquiries about anything related to the website.
+- **Chatbot**: Answers user inquiries about anything related to the website.
 - **Responsive Design**: The website is designed to be mobile-friendly and accessible on various devices.
 
 ## Technologies Used
